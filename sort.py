@@ -6,8 +6,14 @@ import getpass
 import shutil
 
 _user = getpass.getuser()
-dir="/home/"+_user+"/Downloads/"
 
+print "Enter type of OS \n1.Windows \n2.Linux "
+num =int( raw_input())
+if num is 1 :
+	dir='C:/Users/'+_user+'/Downloads/'
+else :
+	dir="/home/"+_user+"/Downloads/"
+print dir 
 def sort(f_type):
   try:  
       dirname=f_type.upper()
@@ -26,20 +32,15 @@ def sort(f_type):
       return	  
   
   except IOError:
-      print "Error in reading file"
-# ADD MORE EXTENSIONS HERE IF YOU WANT
+      print "Error in reading file :IO ERROR "
+str1="mp3 rpm zip pdf doc jpg flv tar torrent txt zip exe "
+print "Enter a Different Extensions seprated by space , Already in library : "+str1+"\n",
+stri = raw_input()
+str1=str1+stri
+stri.split(' ');
+for a in stri :
+	#print a 
+	sort(a)
 
+print "\nDone"
 
-sort("mp3")
-sort("rpm")
-sort("zip")
-sort("pdf")
-sort("doc")
-sort("jpg")
-sort("flv")
-sort("tar")
-sort("torrent")
-sort("txt")
-sort("zip")
-sort("exe")
-#sort("")
