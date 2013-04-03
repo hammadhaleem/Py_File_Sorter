@@ -7,8 +7,7 @@ import shutil
 
 _user = getpass.getuser()
 
-print "Enter type of OS \n1.Windows \n2.Linux "
-num =int( raw_input())
+num =int( raw_input("Enter type of OS \n1.Windows \n2.Linux "))
 if num is 1 :
 	dir='C:/Users/'+_user+'/Downloads/'
 else :
@@ -33,8 +32,8 @@ def sort(f_type):
   
   except IOError:
       print "Error in reading file :IO ERROR "
-str1="mp3 rpm zip pdf doc jpg flv tar torrent txt zip exe "
-print "Enter a Different Extensions seprated by space , Already in library : "+str1+"\n",
+str1="mp3 , rpm , zip , pdf , doc , jpg , flv , tar , torrent , txt , zip , exe "
+print "\nEnter a Different Extensions seprated by spaces \n Already in library : "+str1+"\n",
 stri = raw_input()
 str1=str1+stri
 stri.split(' ');
